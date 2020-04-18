@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                android:layout_marginTop="@dimen/marginCardView"
+                android:layout_marginBottom="@dimen/marginCardView"
+                android:layout_marginRight="@dimen/marginCardView"
+                android:layout_marginLeft="@dimen/marginCardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginBottom="@dimen/marginDetailDialogLinearLayout">
+
+                    <ImageView
+                        android:id="@+id/ivDetailDialogFace"
+                        android:layout_width="@dimen/tamañioDetailDialogFace"
+                        android:layout_height="@dimen/tamañioDetailDialogFace"
+                        android:src="@drawable/icon_freddy"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/tamañioDetailDialogTopFace"/>
+                    <TextView
+                        android:id="@+id/tvDetailConferenceSpeakerName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Freddy Vega"
+                        android:textSize="@dimen/itemScheduleTitulo"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:gravity="center_horizontal"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailSpeakerJobtitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CEO"
+                        android:textSize="15sp"
+                        android:textColor="@color/colorPrimary"
+                        android:gravity="center_horizontal"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginLeft="15dp"/>
+                    <TextView
+                        android:id="@+id/tvDetailConferenceNomberCompany"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Platzi"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/tamañioTitulo"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginNomberCompany"
+                        android:layout_marginLeft="@dimen/marginNomberCompany"/>
+                    <ImageView
+                        android:id="@+id/ivLogoTwitter"
+                        android:layout_width="@dimen/tamañioLogoTwitter"
+                        android:layout_height="@dimen/tamañioLogoTwitter"
+                        android:src="@drawable/ic_icons_twitter"
+                        android:layout_marginTop="@dimen/marginLogoTwitter"
+                        android:layout_gravity="center_horizontal"/>
+                    <TextView
+                        android:id="@+id/tvDetailConferenceDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description"
+                        android:gravity="left"
+                        android:textSize="@dimen/tamañioSubtitulo"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginRight="@dimen/marginDescription"
+                        android:layout_marginLeft="@dimen/marginDescription"
+                        android:layout_marginTop="@dimen/marginDescription"
+                        android:layout_marginBottom="@dimen/marginDescription"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </ScrollView>
+    </FrameLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
